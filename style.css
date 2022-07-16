@@ -1,0 +1,93 @@
+    *{
+        box-sizing: border-box;
+
+    }
+    
+    body {
+        padding: 0 20px;
+        font-size: 0.9rem;
+    }
+    /** Container **/
+    .container {
+        margin: 80px auto;
+    }
+
+    /** Buttons**/
+    button {
+        padding: 2px;
+        cursor: pointer;
+    }
+
+    /**Tooltip**/
+    .tooltip {
+        position: relative;
+        display: inline-block;
+        color: #007bff;
+        border-bottom: 1px dotted #007bff;
+        cursor: help;
+    }
+    
+    .tip {
+        visibility: hidden;
+        width: 150px;
+        background: #f0f0f0;
+        position: absolute;
+        bottom: 120%;
+        padding: 5px 0;
+        left: 50%;
+        margin-left: -75px;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+    
+    .tip.active {
+        visibility: visible;
+        opacity: 1;
+    }
+    
+    .tip::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -4px;
+        border-width: 4px;
+        border-style: solid;
+        border-color: transparent;
+        border-top-color: #f0f0f0;
+    }
+
+    /** Accordion**/
+    .accordion .trigger {
+        border-bottom: 1px solid #0056b3;
+        padding: 10px;
+        position: relative;
+        cursor: pointer;
+    }
+    
+    .accordion .trigger::after {
+        content: ">";
+        display: inline-block;
+        position: absolute;
+        right: 15px;
+        transform: rotate(90deg) scale(0.5, 1);
+        font-weight: bold;
+        transition: transfrom 0.3s;
+    }
+    
+    .accordion .trigger.active::after {
+        transform: rotate(-90deg) scale(0.5, 1);
+    }
+    
+    .accordion .content {
+        display: none;
+    }
+    
+    .accordion .content.active {
+        display: block;
+    }
+
+    /**Tabs**/
+    .tabs>ul {
+        padding: 0;
+    }

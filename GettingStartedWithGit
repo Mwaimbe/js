@@ -1,0 +1,9 @@
+Create a repo in github
+clone the repo to your pc 
+    Use HTTPS
+    Go to the directory you want to clone to - make sure you are in the directory. You can go to the folder and right click > Git Bash Here
+    Run : git clone <https://github.com/Mwaimbe/js.git>
+Work on the repo in your pc
+git add <filename> or git add . 
+git commit -m<"message">
+git push
